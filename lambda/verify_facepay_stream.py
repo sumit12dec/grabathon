@@ -11,14 +11,12 @@ class VideoDetect:
 
 
     def __init__(self):
-        # self.rek = boto3.Session(
-        #     aws_access_key_id="AKIAJEXPUBLEMVOM5FPA",
-        #     aws_secret_access_key="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")
+
         self.jobId = ''
         self.rek = boto3.client('rekognition', 
                     region_name='us-east-1',
-                    aws_access_key_id="AKIAJEXPUBLEMVOM5FPA",
-                    aws_secret_access_key="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")
+                    aws_access_key_id="",
+                    aws_secret_access_key="")
         self.queueUrl = 'https://sqs.us-east-1.amazonaws.com/030231850343/FacePaySQS    '
         self.roleArn = ''
         self.topicArn = ''
